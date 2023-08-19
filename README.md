@@ -1,2 +1,2 @@
 # NeuralNetworkFromScratch
-Neural Network From Scratch
+Neural Network From Scratch.
