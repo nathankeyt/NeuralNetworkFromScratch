@@ -1,3 +1,5 @@
+import numpy as np
+
 class NeuralNetwork:
     def __init__(self, num_inputs: int=1, hidden_layers: list=[1], num_ouputs: list=1):
         print("constructor")
