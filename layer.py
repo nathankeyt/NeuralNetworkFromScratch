@@ -8,8 +8,9 @@ class Layer:
         self.z = np.array()
         self.a = np.array()
     
-    def forward_prop(self, input):
+    def forward(self, input):
         self.z = self.weights.dot(input) + self.biases
         self.a = self.activation(self.z)
         return self.a
         
+    
