@@ -19,14 +19,14 @@ class NeuralNetwork:
         # Init last hidden layer to output layer from a_n-1 -> a_n
         #self.layers.append(Layer(hidden_layers[-1], num_outputs, activation))
     
-    def train(self, input: list, labels: list, epochs: int=10, learning_rate: float=0.1, batch_size: int=3):
+    def train(self, input, labels: list, epochs: int=10, learning_rate: float=0.1, batch_size: int=3):
         return self.forward_prop(np.transpose(input))
         print("train")
 
     def forward_prop(self, input: list):
         prevLayer = self.head
         prevLayer.forward(input)
-        while (prevLayer != None):
+        while (prevLayer.next != None):
             currLayer = prevLayer.next
             currLayer.forward(prevLayer.a)
             prevLayer = currLayer
